@@ -40,10 +40,10 @@ export function score(rank, difficulty, percent, minPercent, list) {
     // Change these values to edit the exponential function.
     const maxExpScore = 300; // The maximum score given by the exponential function.
     const minExpScore = 25; // The minimum score given by the exponential function.
-    const scoreDivider = 130 // The maximum score given by the linear function.
+    const scoreDivider = 300 // The maximum score given by the linear function.
     const curveBuff = 0.4; // Increase this value to steepen the curve of the exponential
                            // function (must be greater than 0).
-    const diffDivider = 6; // The difficulty (exclusive) at which the site will stop using
+    const diffDivider = 11; // The difficulty (exclusive) at which the site will stop using
                            // the linear point system and start using the exponential one.
     // NOTE: If you change the value of diffDivider without adding/removing cases in the
     // switch statement below, it'll mess stuff up.
@@ -67,37 +67,37 @@ export function score(rank, difficulty, percent, minPercent, list) {
             case 0: // If the value of difficulty is 0, do the following:
 
                 /* Beginner Tier */
-                minScore = 3;
-                maxScore = 7;
+                minScore = 10;
+                maxScore = 25;
                 break; // Leave the switch statement without checking any other cases.
             case 1: // If the value of difficulty is 1, do the following:
 
                 /* Easy Tier */
-                minScore = 7.1;
-                maxScore = 13;
+                minScore = 26;
+                maxScore = 50;
                 break;
             case 2: // etc.
 
                 /* Medium Tier */
-                minScore = 13.1;
-                maxScore = 37;
+                minScore = 51;
+                maxScore = 100;
                 break;
             case 3:
 
                 /* Hard Tier */
-                minScore = 37.1;
-                maxScore = 63;
+                minScore = 101;
+                maxScore = 150;
                 break;
             case 4:
 
                 /* Insane Tier */
-                minScore = 63.1;
-                maxScore = 87;
+                minScore = 151;
+                maxScore = 200;
                 break;
             case 5:
 
                 /* Mythical Tier */
-                minScore = 87.1;
+                minScore = 201;
                 maxScore = scoreDivider;
                 break;
             default: // If none of the other cases are met, resort to this:
