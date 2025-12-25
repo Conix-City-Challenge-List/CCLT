@@ -38,8 +38,8 @@ export function score(rank, difficulty, percent, minPercent, list) {
 
     // EXPONENTIAL FUNCTION CONFIGURATION
     // Change these values to edit the exponential function.
-    const maxExpScore = 750; // The maximum score given by the exponential function.
-    const minExpScore = 131; // The minimum score given by the exponential function.
+    const maxExpScore = 300; // The maximum score given by the exponential function.
+    const minExpScore = 25; // The minimum score given by the exponential function.
     const scoreDivider = 130 // The maximum score given by the linear function.
     const curveBuff = 0.4; // Increase this value to steepen the curve of the exponential
                            // function (must be greater than 0).
@@ -176,43 +176,33 @@ export function packScore(pack) {
         switch (pack.difficulty) { // Set the pack's score based on its difficulty.
             case 0:
 
-                /* Beginner Packs */
-                packscore = 5;
-                break;
-            case 1:
-
-                /* Easy Packs */
-                packscore = 15;
-                break;
-            case 2:
-
-                /* Medium Packs */
-                packscore = 30;
+               /* EASY Packs */
+                packscore = 500;
                 break;
             case 3:
 
-                /* Hard Packs */
-                packscore = 50;
+                /* MEDIUM Packs */
+                packscore = 750;
                 break;
             case 4:
 
-                /* Insane Packs */
-                packscore = 70;
+                /* HARD Packs */
+                packscore = 1000;
                 break;
             case 5:
 
-                /* Mythical Packs */
-                packscore = 100;
+                /* EXTREME Packs */
+                packscore = 1500;
                 break;
             case 6:
 
-                /* Extreme Packs */
-                packscore = 150;
+                /* IMPOSSIBLEPacks */
+                packscore = 2000;
                 break;
             case 7:
 
-                /* Legendary Packs */
-                packscore = 200;
+                /* SILENT Packs */
+                packscore = 5000;
                 break;
             default:
 
@@ -260,23 +250,7 @@ export function packColor(difficulty) {
     switch (difficulty) { // Set the pack's color based on its difficulty.
         case 0:
 
-            /* Beginner Packs */
-            r = 197;
-            g = 12;
-            b = 105;
-            a = 0.9;
-            break;
-        case 1:
-
-            /* Easy Packs */
-            r = 0;
-            g = 53;
-            b = 177;
-            a = 0.9;
-            break;
-        case 2:
-
-            /* Medium Packs */
+            /* EASY Packs */
             r = 17;
             g = 137;
             b = 54;
@@ -284,21 +258,21 @@ export function packColor(difficulty) {
             break;
         case 3:
 
-            /* Hard Packs */
+            /* MEDIUM Packs */
             r = 204;
             g = 209;
             a = 0.8;
             break;
         case 4:
 
-            /* Insane Packs */
+            /* HARD Packs */
             r = 211;
             g = 99;
             a = 0.9;
             break;
         case 5:
 
-            /* Mythical Packs */
+            /* EXTREME Packs */
             r = 117;
             g = 13;
             b = 209;
@@ -306,7 +280,7 @@ export function packColor(difficulty) {
             break;
         case 6:
 
-            /* Extreme Packs */
+            /* IMPOSSIBLE Packs */
             r = 217;
             g = 6;
             b = 6;
@@ -314,7 +288,7 @@ export function packColor(difficulty) {
             break;
         case 7:
 
-            /* Legendary Packs */
+            /* SILENT Packs */
             r = 200;
             g = 200;
             b = 200;
