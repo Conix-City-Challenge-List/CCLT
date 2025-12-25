@@ -1,11 +1,9 @@
 [
 	{
-		"name": "Duckly",
+		"name": "Duckly Pack",
 		"difficulty": 2,
 		"levels": [
-			"hi",
-			"the_candy_pump",
-			"test"
+			"Conix City Challenge"
 		]
 	},
 ]
