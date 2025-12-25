@@ -34,7 +34,6 @@ export default {
                 <select v-model="sortOption">
                     <option value="0">Ranking</option>
                     <option value="1">Enjoyment</option>
-                    <option value="2">Popularity</option>
                 </select>
                 <p style="font-size: 9.5px; opacity: 30%;" class="director" @click="descending = !descending">{{ descending === true ? 'Descending' : 'Ascending' }}</p>
             </div>
